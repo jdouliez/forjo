@@ -1,0 +1,12 @@
+<sinisters>
+	<sinister>
+		<contractId>123456</contractId>
+		<type>IARD</type>
+		<description>Incendie maison</description>
+	</sinister>
+	<sinister>
+		<contractId>789456</contractId>
+		<type>IARD</type>
+		<description>Dégat des eaux</description>
+	</sinister>
+</sinisters>

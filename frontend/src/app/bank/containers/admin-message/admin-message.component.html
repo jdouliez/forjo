@@ -1,0 +1,30 @@
+
+<div class="happy-header"></div>
+
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+  <h2 i18n="@@admin-message.title">Here are the messages for the advisors</h2>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th i18n="@@admin-message.results.column.from">From</th>
+        <th i18n="@@admin-message.results.column.to">To</th>
+        <th i18n="@@admin-message.results.column.subject">Subject</th>
+        <th i18n="@@admin-message.results.column.content">Content</th>
+        <th i18n="@@admin-message.results.column.actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let msg of messages">
+        <td>{{msg.from}}</td>
+        <td>{{msg.to}}</td>
+        <td><p [innerHTML]="msg.subject"></p></td>
+        <td><p [innerHTML]="msg.content"></p></td>
+        <td>
+          <button *ngIf="msg.status === 'TOREPLY'" class="btn btn-info action-reply" (click)="reply(msg.idMessage)">Reply to client</button>
+          <button *ngIf="msg.status !== 'TOREPLY'" class="btn btn-disable" disabled="disabled" i18n="@@admin-message.results.actions.waiting">Waiting for client</button>
+          <button class="btn btn-danger action-delete" (click)="delete(msg.idMessage)" i18n="@@admin-message.results.actions.delete">Delete</button>
+      </tr>
+    </tbody>
+  </table>
+</div>

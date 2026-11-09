@@ -1,0 +1,20 @@
+<app-nav *ngIf="router.url !== '/remediation'"></app-nav>
+<header class="remediation-header" [class.is-hidden]="router.url !== '/remediation'">
+  <app-header #head></app-header>
+</header>
+<main>
+  <div class="position-fixed shadow">
+  </div>
+  <aside>
+    <div class="scroller">
+    </div>
+  </aside>
+  <div class="page">
+    <div class="contents">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+<footer class="footer navbar-fixed-bottom">
+    <app-footer ></app-footer>
+</footer>

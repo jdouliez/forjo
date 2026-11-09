@@ -1,0 +1,79 @@
+<div class="happy-header">
+</div>
+
+<div class="profile">
+  <div class="cover-image">
+    <img [src]="this.picture_base64" alt="profile_picture" id="profile_picture" />
+  </div>
+
+  <div class="profile-cols">
+    <section class="profile-col">
+      <h2 i18n="@@profil.section.info.label">My infos</h2>
+
+      <form [formGroup]="infoForm" (ngSubmit)="modifyInfos()">
+
+        <input type="hidden" formControlName="id" />
+
+        <div class="form-group">
+          <label for="firstname" i18n="@@profil.section.info.firstname">Firstname</label>
+          <input type="text" class="form-control" value="" formControlName="firstname" placeholder="Your firstname..." i18n-placeholder="@@profil.section.info.firstname.placeholder" />
+          <div *ngIf="this.infoForm.controls.firstname.touched && this.infoForm.controls.firstname.invalid" class="alert alert-danger">
+            <div *ngIf="this.infoForm.controls.firstname.errors.required" i18n="@@profil.section.info.firstname.error.required">The first name is required.</div>
+            <div *ngIf="this.infoForm.controls.firstname.errors.minlength" i18n="@@profil.section.info.firstname.error.minlength">The first name must contain at least 3 characters.</div>
+            <div *ngIf="this.infoForm.controls.firstname.errors.pattern" i18n="@@profil.section.info.firstname.error.pattern">The first name is incorrect.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastname"  i18n="@@profil.section.info.name">Name</label>
+          <input type="text" class="form-control" value="" formControlName="lastname" placeholder="Your name..." i18n-placeholder="@@profil.section.info.name.placeholder"/>
+          <div *ngIf="this.infoForm.controls.lastname.touched && this.infoForm.controls.lastname.invalid"
+            class="alert alert-danger">
+            <div *ngIf="this.infoForm.controls.lastname.errors.required" i18n="@@profil.section.info.name.error.required">The name is required.</div>
+            <div *ngIf="this.infoForm.controls.lastname.errors.minlength" i18n="@@profil.section.info.name.error.minlength">The name must contain at least 3 characters.</div>
+            <div *ngIf="this.infoForm.controls.lastname.errors.pattern" i18n="@@profil.section.info.name.error.pattern">The name is incorrect.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address" i18n="@@profil.section.info.address">Address</label>
+          <input type="text" class="form-control" value="" formControlName="address" placeholder="Your address..." i18n-placeholder="@@profil.section.info.address.placeholder" />
+          <div *ngIf="this.infoForm.controls.address.touched && this.infoForm.controls.address.invalid" class="alert alert-danger">
+            <div *ngIf="this.infoForm.controls.address.errors.required" i18n="@@profil.section.info.address.error.required">The address is required.</div>
+            <div *ngIf="this.infoForm.controls.address.errors.minlength" i18n="@@profil.section.info.address.error.minlength">The address must contain at least 3 characters.</div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="btn btn-primary" [disabled]="! infoForm.valid" i18n="@@profil.section.button.label">Modify</button><br/><br/>
+          <span *ngIf="infoUpdateSuccess" class="alert alert-success" i18n="@@profil.section.info.update.success">Profile information updated successfully!</span>
+          <span *ngIf="infoUpdateFailure" class="alert alert-danger" i18n="@@profil.section.info.update.failure">An error occurred while updating profile information.Please retry later.</span>
+        </div>
+      </form>
+    </section>
+
+    <section class="profile-col">
+      <h2 i18n="@@profil.section.picture.label">My cover picture</h2>
+
+      <form [formGroup]="pictureForm" (ngSubmit)="modifyPicture()">
+
+        <input type="hidden" formControlName="id" />
+
+        <div class="form-group">
+          <label for="picture_url" i18n="@@profil.section.picture.url">Url</label>
+          <input type="text" class="form-control" value="" formControlName="picture_url" placeholder="Cover picture url..." i18n-placeholder="@@profil.section.picture.url.placeholder"/>
+          <div *ngIf="this.pictureForm.controls.picture_url.touched && this.pictureForm.controls.picture_url.invalid" class="alert alert-danger">
+            <div *ngIf="this.pictureForm.controls.picture_url.errors.required" i18n="@@profil.section.picture.url.error.required">The URL is required.</div>
+            <div *ngIf="this.pictureForm.controls.picture_url.errors.pattern" i18n="@@profil.section.picture.url.error.pattern">The url must end with .png, .jpg or .jpeg.</div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="btn btn-primary" [disabled]="! pictureForm.valid" i18n="@@profil.section.button.label">Modify</button><br/><br/>
+          <span *ngIf="pictureUpdateSuccess" class="alert alert-success" i18n="@@profil.section.picture.update.success">Cover picture updated successfully!</span>
+          <span *ngIf="pictureUpdateFailure" class="alert alert-danger" i18n="@@profil.section.picture.update.failure">An error occurred while updating your cover picture. Please retry later.</span>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

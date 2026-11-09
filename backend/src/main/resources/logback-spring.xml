@@ -1,0 +1,50 @@
+<configuration debug="true"> 
+    <!-- Define path to logs dir -->
+    <property name="LOG_PATH" value="logs"/>
+    <!-- Appender to write log into file -->
+    <appender name="INFO_TO_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/log.log</file>
+        <encoder>
+            <pattern>%d{HH:mm} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+     <!-- Appender to write log into file -->
+    <appender name="SECU_TO_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/seculog.log</file>
+        <encoder>
+            <pattern>%d{YYYY-MM-dd HH:mm:ss} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Appender to write log into honeypot log -->
+    <appender name="HONEYPOT_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/honeypot.log</file>
+        <encoder>
+            <pattern>%d{HH:mm} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Appender to write log into STDOUT -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Logger for project controller -->
+    <logger name="ControllerInfoLogger" level="info">
+        <appender-ref ref="INFO_TO_FILE" />
+    </logger>
+     <!-- Logger for project controller -->
+    <logger name="SecurityInfoLogger" level="info">
+        <appender-ref ref="SECU_TO_FILE" />
+    </logger>
+    <!-- Logger for project honeypot -->
+    <logger name="honeypot" level="info">
+        <appender-ref ref="HONEYPOT_LOG" />
+    </logger>
+    <!-- Root logger -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+    <logger name="thales.spring.angular.demo.remediation.util.LoggingRequestInterceptor" level="info" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+</configuration>

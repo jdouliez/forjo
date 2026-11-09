@@ -1,0 +1,59 @@
+version: '3.7'
+
+volumes:
+    maven_m2:
+
+services:
+    backend:
+        container_name: forjo-backend
+        hostname: forjo-backend
+        build: 
+            context: ./backend
+            dockerfile: Dockerfile-dev
+        ports:
+            - 0.0.0.0:8080:8080
+        volumes:
+            - maven_m2:/root/.m2
+            - ./backend:/app
+            
+    frontend:
+        build: ./frontend
+        container_name: forjo-frontend
+        hostname: forjo-frontend
+        image: forjo-frontend
+        depends_on:
+            - backend
+        ports:
+            - 0.0.0.0:4200:4200
+        volumes:
+            - ./frontend:/var/www:rw
+
+    bot_xss:
+        build: ./bot_xss
+        container_name: forjo-bot_xss
+        hostname: forjo-bot_xss
+        image: forjo-bot_xss
+        depends_on:
+            - frontend
+        entrypoint:
+            - python
+            - -u
+            - /home/bot.py
+            - "http://frontend:4200"
+
+    #inspect:
+    #    image: agaveapi/requestbin:master
+    #    ports:
+    #        - "0.0.0.0:5000:5000"
+    #    container_name: forjo-inspect        
+    #    links:
+    #        - redis
+    #    environment:
+    #        - 'STORAGE_BACKEND=requestbin.storage.redis.RedisStorage'
+    #        - 'REDIS_URL=redis://redis:6379/0'
+
+    #redis:
+    #    image: redis:2.8
+    #    container_name: forjo-redis
+    #    expose:
+    #        - 6379

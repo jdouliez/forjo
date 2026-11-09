@@ -1,0 +1,12 @@
+:host { display: block; }
+
+/* Empty-state message, centered under the table */
+.no-data {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 22px 0 4px;
+  color: var(--muted, #475569);
+  font-weight: 600;
+  font-size: 17px;
+}

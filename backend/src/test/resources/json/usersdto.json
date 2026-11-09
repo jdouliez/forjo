@@ -1,0 +1,15 @@
+[{
+	"lastname": "admin",
+	"firstname": "istrateur",
+        "email" : "testadmin@email.com",
+        "password" : "TestAdmin",
+        "address" : "129 rue racine, 59000 LILLE",
+        "role" : 2
+},{
+	"lastname": "util",
+	"firstname": "isateur",
+        "email" : "testuser@email.com",
+        "password" : "TestUser",
+        "address" : "129 rue lambda, 59200 TOURCOING",
+        "role" : 1
+}]

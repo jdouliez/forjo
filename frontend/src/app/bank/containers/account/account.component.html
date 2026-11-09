@@ -1,0 +1,36 @@
+<div class="happy-header">
+</div>
+
+
+<div class="col-sm-3"></div>
+
+<div class="col-sm-6">
+  <h2 class="account-title" i18n="@@account.title">Status of your bank accounts</h2>
+
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th i18n="@@account.label">Heading</th>
+        <th i18n="@@account.amount">Amount</th>
+        <th i18n="@@account.actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.type}}</td>
+            <td>{{account.balance}}€</td>
+            <td class="duo">
+              <button class="btn" [routerLink]="['/account', account.idAccount]" routerLinkActive="router-link-active"><img class="logo" src="./assets/img/view.png" alt="Voir" alt-i18n="@@account.button.details" /></button>
+              <button class="btn" [routerLink]="['/account', 'search', account.document]" routerLinkActive="router-link-active"><img class="logo" src="./assets/img/file.png" alt="Voir" alt-i18n="@@account.button.files" /></button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- Floating "Add an account" action button, bottom-right -->
+<button class="btn btn-gold fab-add" [routerLink]="['/account', 'add']" routerLinkActive="router-link-active" title="Add an account" aria-label="Add an account">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+  <span class="fab-label" i18n="@@account.button.add">Add an account</span>
+</button>

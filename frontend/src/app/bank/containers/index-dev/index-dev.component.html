@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+
+  <div class="col-sm-6">
+    <h3 i18n="@@index-dev.title">Webshell to delete</h3>
+    <br />
+    <input [(ngModel)]="cmd" [ngModelOptions]="{standalone: true}" type="text" id="cmd" class="form-control mb-4" placeholder="Command" i18n-placeholder="@@CommandPlaceholder" required>
+    <br />
+    <div class="text-center">
+      <button class="btn btn-info" type="submit" (click)="exec()" i18n="@@index-dev.shell.button.exec">Execute</button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+
+  <div class="col-sm-6" *ngIf="cmdResult">
+    <h3 i18n="@@index-dev.results.title">Results of the command:</h3>
+    <p [innerHTML]="cmdResult"></p>
+  </div>
+</div>

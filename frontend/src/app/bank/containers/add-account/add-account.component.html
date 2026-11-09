@@ -1,0 +1,50 @@
+<div class="happy-header">
+</div>
+
+<div class="add-account">
+  <h2 i18n="@@add-account.title">Which accounts do you want to add ?</h2>
+
+  <div class="upload-card">
+    <div class="dropzone">
+      <svg class="dz-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <path d="M17 8l-5-5-5 5"/>
+        <path d="M12 3v12"/>
+      </svg>
+      <label for="file" class="dz-label" i18n="@@add-account.download.label">Download the account file</label>
+      <span class="dz-hint">XML file exported from your template</span>
+      <input type="file" id="file" accept=".xml" class="form-control dz-input" (change)="handleFileInput($event.target.files)">
+      <a class="download-link" (click)="downloadAccountTemplateFile()" i18n="@@add-account.download.templatefile">Download template file</a>
+    </div>
+
+    <h4 class="upload-error" *ngIf="error"><span i18n="@@add-account.download.error">An error occurred when sending the file</span></h4>
+
+    <div class="upload-actions">
+      <button class="btn btn-primary btn-lg" (click)="upload()" i18n="@@add-account.download.button.add">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="add-account results" *ngIf="receivedFile">
+  <h3 i18n="@@add-account.results.title">Here are the details of the account created:</h3>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th i18n="@@add-account.results.column.id">ID:</th>
+        <th i18n="@@add-account.results.column.type">Type:</th>
+        <th i18n="@@add-account.results.column.balance">Balance:</th>
+        <th i18n="@@add-account.results.column.rate">Rate:</th>
+        <th i18n="@@add-account.results.column.doc">Document:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let msg of receivedFile">
+        <td>{{msg.idAccount}}</td>
+        <td>{{msg.type}}</td>
+        <td>{{msg.balance}}</td>
+        <td>{{msg.rate}}</td>
+        <td>{{msg.document}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

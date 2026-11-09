@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+    backend:
+        container_name: forjo_backend
+        hostname: forjo_backend
+        build: ./backend
+        working_dir: /var/www
+        user: www-data
+        ulimits:
+          nofile:
+            soft: 65536
+            hard: 65536
+
+    frontend:
+        build: ./frontend
+        container_name: forjo_frontend
+        hostname: forjo_frontend
+        depends_on:
+            - backend
+        expose:
+            - 4200
+
+    ftp:
+        build: ./ftp
+        container_name: forjo_ftp
+        expose:
+            - 21
+            - 4559-4564
+        volumes:
+            - ./ftp/backup_clients.csv:/ftp/ftp/backup_clients.csv
+
+    reverse-proxy:
+        image: nginx:latest
+        container_name: forjo_reverse_proxy
+        ports:
+            - "80:80"
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+            - ./nginx/2016.pdf:/var/www/documents/2016.pdf:ro
+        depends_on:
+            - frontend

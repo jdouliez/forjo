@@ -1,0 +1,163 @@
+@import "../../../../variables";
+
+:host { display: block; }
+
+.index {
+  &.container-fluid {
+    padding: 8px 0 0;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+/* Two-column hero: campaign visual + welcome/auth card */
+.is-table-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 32px;
+  width: 100%;
+}
+.is-table-row > [class*="col-"] {
+  display: flex;
+  float: none;
+  width: auto;
+  flex: 1 1 380px;
+  vertical-align: top;
+}
+
+/* Left campaign image → framed, rounded, elevated */
+.is-table-row > .col-sm-6:first-child {
+  align-items: center;
+  justify-content: center;
+}
+.is-table-row > .col-sm-6:first-child img {
+  border-radius: var(--radius-xl, 22px);
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  max-height: 560px;
+}
+
+/* Right column stacks the greeting and the auth card */
+.is-table-row > .col-sm-6:last-child {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Greeting block — tightly grouped and aligned to the card width */
+.content {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 0 0 6px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: 1.25;
+    color: var(--brand-800, #0F172A);
+  }
+
+  /* the legacy "picto" clip-art → small, balanced, discreet accent */
+  img {
+    display: block;
+    width: 56px;
+    height: auto;
+    margin: 0 auto 2px !important;   /* neutralise the legacy -70px pull */
+    opacity: .9;
+  }
+}
+
+#message {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 20px;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--muted, #475569);
+  }
+}
+
+/* Auth card — clean, elevated, white */
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-lg);
+  padding: 34px 30px;
+
+  form {
+    border: none !important;
+    padding: 0 !important;
+
+    h3, .h4, p.h4 {
+      margin-bottom: 22px;
+      font-weight: 700;
+      color: var(--brand-800, #0F172A);
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 11px 14px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--ink, #0F172A);
+    background-color: var(--surface, #fff);
+    background-image: none;
+    border: 1px solid var(--border-strong, #CBD5E1);
+    border-radius: var(--radius, 12px);
+    transition: border-color var(--t), box-shadow var(--t);
+  }
+  input:focus {
+    outline: none;
+    border-color: var(--brand-500, #2563EB);
+    box-shadow: var(--ring);
+  }
+
+  .btn { width: 100%; margin-top: 6px; }
+
+  a {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 14px;
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--brand-600, #1E3A8A);
+  }
+  a:hover { color: var(--brand-500, #2563EB); text-decoration: underline; }
+}
+
+/* The hidden admin-toggle wrapper used `visibility:hidden` and still reserved
+   vertical space, leaving a gap before the CTA. Collapse it (the #check ref
+   stays in the DOM, so connection(check.checked) is unaffected). */
+.login-card form > div[style*="visibility"] { display: none; }
+
+.admin-check {
+  width: 20px !important;
+  height: 30px !important;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .is-table-row { gap: 20px; }
+  .is-table-row > .col-sm-6:first-child { display: none; }   /* focus on the form on mobile */
+  .content h1 { font-size: 1.4rem; }
+}

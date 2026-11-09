@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <target>Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/alert/alert.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <target>Previous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <target>Next</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <target>Previous month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <target>Next month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <target>Select month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <target>Select year</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <target>««</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <target>«</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <target>»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <target>»»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <target>First</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <target>Previous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <target>Next</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <target>Last</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source>
+        <target><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/progressbar/progressbar.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <target>Increment hours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <target>HH</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <target>Hours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <target>Decrement hours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <target>Increment minutes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <target>MM</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <target>Minutes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <target>Decrement minutes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <target>Increment seconds</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <target>SS</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <target>Seconds</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <target>Decrement seconds</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source>PM</source>
+        <target>PM</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source>AM</source>
+        <target>AM</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.account" datatype="html">
+        <source>My account</source>
+        <target>My account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.advisor" datatype="html">
+        <source>My advisor</source>
+        <target>My advisor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.infos" datatype="html">
+        <source>My personal data</source>
+        <target>My personal data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.rib" datatype="html">
+        <source>RIB</source>
+        <target>RIB</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.safe" datatype="html">
+        <source>My safe</source>
+        <target>My safe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.logout" datatype="html">
+        <source>Log out</source>
+        <target>Log out</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/nav/nav.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-link.index" datatype="html">
+        <source>Lion&apos;s Banking corporation</source>
+        <target>Lion&apos;s Banking corporation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/header/header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="not-found.title" datatype="html">
+        <source>Error 404</source>
+        <target>Error 404</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="not-found.infos.firstparagraph" datatype="html">
+        <source>The page you are looking for has been deleted, changed its name or is temporarily unavailable</source>
+        <target>The page you are looking for has been deleted, changed its name or is temporarily unavailable</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="not-found.infos.secondparagraph" datatype="html">
+        <source>Return to home page : </source>
+        <target>Return to home page : </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="not-found.infos.link.click" datatype="html">
+        <source>Click Here</source>
+        <target>Click Here</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="not-found.infos.thirdparagraph" datatype="html">
+        <source>Good luck</source>
+        <target>Good luck</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/userinterface/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.title" datatype="html">
+        <source>Status of your bank accounts</source>
+        <target>Status of your bank accounts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.label" datatype="html">
+        <source>Heading</source>
+        <target>Heading</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.status" datatype="html">
+        <source>Status</source>
+        <target>Status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.file" datatype="html">
+        <source>Files</source>
+        <target>Files</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.button.details" datatype="html">
+        <source>Edit</source>
+        <target>Edit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.button.add" datatype="html">
+        <source>Add an account</source>
+        <target>Add an account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/account/account.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.title" datatype="html">
+        <source>An advisor at your disposal to listen to you</source>
+        <target>An advisor at your disposal to listen to you</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.column.surname" datatype="html">
+        <source>Surname</source>
+        <target>Surname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.column.name" datatype="html">
+        <source>Firstname</source>
+        <target>Firstname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.column.office" datatype="html">
+        <source>Office</source>
+        <target>Office</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.title" datatype="html">
+        <source>Have you got any questions ?</source>
+        <target>Have you got any questions ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.object.title" datatype="html">
+        <source>Object :</source>
+        <target>Object :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.object.placeholder" datatype="html">
+        <source>Enter your subject</source>
+        <target>Enter your subject</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.message.title" datatype="html">
+        <source>Message :</source>
+        <target>Message :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.message.placeholder" datatype="html">
+        <source>Enter your message</source>
+        <target>Enter your message</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.button.send" datatype="html">
+        <source>Send</source>
+        <target>Send</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="advisor.question.result.title" datatype="html">
+        <source>Your question:</source>
+        <target>Your question:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/advisor/advisor.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.title" datatype="html">
+        <source>Summary of your personal data</source>
+        <target>Summary of your personal data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.result.column.name" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.result.column.surname" datatype="html">
+        <source>Surname</source>
+        <target>Surname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.result.column.address" datatype="html">
+        <source>Address</source>
+        <target>Address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.result.column.accounts" datatype="html">
+        <source>Bank accounts</source>
+        <target>Bank accounts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="infos.cookie.infos" datatype="html">
+        <source>The cookie &apos;user&apos; is not present on your browser. Please login to view your information.</source>
+        <target>The cookie &apos;user&apos; is not present on your browser. Please login to view your information.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/infos/infos.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.title" datatype="html">
+        <source>Upload your RIB</source>
+        <target>Upload your RIB</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.column.account" datatype="html">
+        <source>Account</source>
+        <target>Account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.column.number" datatype="html">
+        <source>Identifier</source>
+        <target>Identifier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.column.rib" datatype="html">
+        <source>RIB</source>
+        <target>RIB</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.firstline.account" datatype="html">
+        <source>Current account</source>
+        <target>Current account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.firstline.number" datatype="html">
+        <source>FR76 - 588545 65644 959</source>
+        <target>FR76 - 588545 65644 959</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rib.result.button.download" datatype="html">
+        <source>Download</source>
+        <target>Download</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/rib/rib.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome" datatype="html">
+        <source>Welcome to your amazing bank</source>
+        <target>Welcome to your amazing bank</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="connexionInvit" datatype="html">
+        <source>Please login before accessing your amazing bank</source>
+        <target>Please login before accessing your amazing bank</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.connexion.title" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="EmailPlaceholder" datatype="html">
+        <source>E-mail</source>
+        <target>E-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="PasswordPlaceholder" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.connexion.admin" datatype="html">
+        <source>Connection for administrators</source>
+        <target>Connection for administrators</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.connexion.button.connect" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.connexion.error" datatype="html">
+        <source>Incorrect credentials</source>
+        <target>Incorrect credentials</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.link.register" datatype="html">
+        <source>Register now</source>
+        <target>Register now</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.title" datatype="html">
+        <source>Create an account</source>
+        <target>Create an account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error" datatype="html">
+        <source>Failed to create account, check the content of the fields</source>
+        <target>Failed to create account, check the content of the fields</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.email.required" datatype="html">
+        <source>The E-mail field is required</source>
+        <target>The E-mail field is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.email.format" datatype="html">
+        <source>Incorrect E-mail format</source>
+        <target>Incorrect E-mail format</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.password.required" datatype="html">
+        <source>The Password field is required</source>
+        <target>The Password field is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="NamePlaceholder" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.name.required" datatype="html">
+        <source>The Name field is required</source>
+        <target>The Name field is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="SurnamePlaceholder" datatype="html">
+        <source>Surname</source>
+        <target>Surname</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.surname.required" datatype="html">
+        <source>The Surname field is required</source>
+        <target>The Surname field is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="AdressPlaceholder" datatype="html">
+        <source>Address</source>
+        <target>Address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.error.address.required" datatype="html">
+        <source>The Address field is required</source>
+        <target>The Address field is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.register.button.register" datatype="html">
+        <source>Sign up</source>
+        <target>Sign up</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index.link.connexion" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index/index.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search-account.title" datatype="html">
+        <source>Your account summary</source>
+        <target>Your account summary</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/search-account/search-account.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search-account.result.column.file" datatype="html">
+        <source>Files</source>
+        <target>Files</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/search-account/search-account.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.title" datatype="html">
+        <source>Which accounts do you want to add ?</source>
+        <target>Which accounts do you want to add ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.download.label" datatype="html">
+        <source>Download the account file</source>
+        <target>Download the account file</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.download.button.add" datatype="html">
+        <source>Add</source>
+        <target>Add</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.download.error" datatype="html">
+        <source>An error occurred when sending the file</source>
+        <target>An error occurred when sending the file</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.title" datatype="html">
+        <source>Here are the details of the account created:</source>
+        <target>Here are the details of the account created:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.column.id" datatype="html">
+        <source>ID:</source>
+        <target>ID:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.column.type" datatype="html">
+        <source>Type:</source>
+        <target>Type:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.column.balance" datatype="html">
+        <source>Balance:</source>
+        <target>Balance:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.column.rate" datatype="html">
+        <source>Rate:</source>
+        <target>Rate:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-account.results.column.doc" datatype="html">
+        <source>Document:</source>
+        <target>Document:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/add-account/add-account.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index-dev.title" datatype="html">
+        <source>Webshell to delete</source>
+        <target>Webshell to delete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index-dev/index-dev.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="CommandPlaceholder" datatype="html">
+        <source>command</source>
+        <target>command</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index-dev/index-dev.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index-dev.shell.button.exec" datatype="html">
+        <source>Execute</source>
+        <target>Execute</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index-dev/index-dev.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="index-dev.results.title" datatype="html">
+        <source>Results of the command:</source>
+        <target>Results of the command:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/index-dev/index-dev.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.panel.message" datatype="html">
+        <source>Congratzzzzz you are in admin area...</source>
+        <target>Congratzzzzz you are in admin area...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin/admin.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.title" datatype="html">
+        <source>Hello admin, here are the messages for the advisors</source>
+        <target>Hello admin, here are the messages for the advisors</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.results.column.from" datatype="html">
+        <source>From :</source>
+        <target>From :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.results.column.to" datatype="html">
+        <source>To :</source>
+        <target>To :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.results.column.subject" datatype="html">
+        <source>Subject :</source>
+        <target>Subject :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.results.column.content" datatype="html">
+        <source>Content :</source>
+        <target>Content :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-message.results.column.status" datatype="html">
+        <source>Status :</source>
+        <target>Status :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-message/admin-message.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin-honey.title" datatype="html">
+        <source>Honeypot logs :</source>
+        <target>Honeypot logs :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/bank/containers/admin-honey/admin-honey.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

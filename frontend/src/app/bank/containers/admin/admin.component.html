@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6 text-center" *ngIf="adminpanel">
+        <h1 i18n="@@admin.panel.message">Congratzzzzz h@cker, you are in admin area...</h1>
+        <img src='../../assets/img/admin.gif' />
+    </div>
+    <div class="col-sm-6 text-center" *ngIf="!adminpanel">
+      <h1 i18n="@@admin.panel.noaccess1">You have no right to be here!</h1><br/>
+      <h1 i18n="@@admin.panel.noaccess2">Unauthorized access!</h1>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngIf="router.url !== '/remediation'">
+            <a class="nav-link title" routerLink="/" routerLinkActive="router-link-active" i18n="@@nav-link.index">Lion's Banking corporation</a>
+        </div>
+        <div class="col-sm-3" *ngIf="router.url === '/remediation'">
+            <h1>
+                Forjo
+            </h1>
+        </div>
+        <div class="col-sm-2 col-sm-offset-7">
+            <ul class="list-inline">
+                <li *ngIf="router.url !== '/remediation'" class="list-inline-item"><a (click)="changeLanguage('fr')" alt="FR">🇫🇷</a></li>
+                <li *ngIf="router.url === '/remediation'" class="list-inline-item disabled" >🇫🇷</li>
+                <span>/</span>
+                <li class="list-inline-item"><a (click)="changeLanguage('en')"  alt="EN">🇬🇧</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

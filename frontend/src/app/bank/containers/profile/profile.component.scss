@@ -1,0 +1,66 @@
+:host { display: block; }
+
+.profile {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Centered profile photo */
+.cover-image {
+  text-align: center;
+  margin: 6px 0 28px;
+
+  img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--surface, #fff);
+    box-shadow: var(--shadow-lg);
+    background: var(--surface-2, #F8FAFC);
+  }
+}
+
+/* Two columns: "My infos" | "My cover picture" */
+.profile-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-col {
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #E2E8F0);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-md);
+  padding: 24px 24px 20px;
+
+  h2 {
+    margin: 0 0 18px;
+    font-size: 1.3rem;
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+}
+.button button {
+  width: auto;
+  min-width: 160px;
+}
+
+.alert-danger {
+  margin-top: 6px;
+  padding: 8px 12px;
+}
+.alert-success { margin-top: 6px; }
+
+@media (max-width: 768px) {
+  .profile-cols { grid-template-columns: 1fr; }
+}

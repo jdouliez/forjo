@@ -1,0 +1,19 @@
+# Local dev override (NOT tracked) — works around the /mnt/Shared bind-mount
+# not supporting symlinks (node_modules/.bin) and the missing mvnw wrapper.
+# Usage:
+#   docker compose -f docker-compose-dev.yml -f docker-compose.dev.local.yml up -d backend frontend
+services:
+  backend:
+    # image base (openkbs/jdk-mvn-py3) already ships maven; use it directly
+    # instead of the un-committed ./mvnw wrapper.
+    entrypoint: ["mvn", "spring-boot:run"]
+
+  frontend:
+    # keep node_modules inside a Docker volume (seeded from the image) so the
+    # symlinks in node_modules/.bin work; the host source stays bind-mounted
+    # for hot reload.
+    volumes:
+      - node_modules_front:/var/www/node_modules
+
+volumes:
+  node_modules_front:

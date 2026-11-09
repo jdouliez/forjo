@@ -1,0 +1,20 @@
+<div class="happy-header"></div>
+
+<div class="col-sm-3"></div>
+
+<div class="col-sm-6">
+  <h2 i18n="@@search-account.title">Your account summary</h2>
+
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th i18n="@@search-account.result.column.file">Files</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td><p *ngFor="let file of files">{{file.content}}</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

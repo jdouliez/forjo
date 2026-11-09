@@ -1,0 +1,78 @@
+{
+  "all": {
+    "steps": [
+      {
+        "intro": "<strong>Welcome to Forjo remediation checker app</strong><br/><br/>This application allows you to have an overview of the different vulnerabilities you have fixed in the vulnerable bank application.<br/><br/>"
+      },
+      {
+        "element": "#dashboard_all",
+        "intro": "<strong>Main dashboard</strong><br/><br/>You can check all informations about application's vulnerabilities."
+      },
+      {
+        "element": "#dashboard_all_tops",
+        "intro": "<strong>Vulnerabilities list</strong><br/><br/>In this area you have the list of each vulnerability present in the OWASP Top 10.<br /><br /><strong>There are 3 possibilities : </strong><ul><li><b style=\"color:green\">The OWASP section is green</b>, which means that all relevant vulnerabilities have been fixed.</li><li><b style=\"color:red\">The OWASP section is red</b>, which means that not all the vulnerabilities concerned have been fixed. It is indicated below the section name the number of failed tests.</li><li><b style=\"color:grey\">The OWASP section is grey</b>, which means that no tests have been run yet or the vulnerability is no longer functional.</li></ul>"
+      },
+      {
+        "element": "#dashboard_all_graph",
+        "intro": "<strong>Stats</strong><br/><br/>This graph shows you the percentage of failed and successful tests for each section of OWASP TOP 10."
+      },
+      {
+        "element": "#run_button",
+        "intro": "<strong>Test your code</strong><br/><br/>This button allows you to run all the tests for each vulnerability.<br><strong>It is possible to launch only some specific tests for a section by going to the page concerned.</strong>"
+      },
+      {
+        "intro": "<strong>Here you go !</strong><br/><br/>Now you can start fixing the vulnerabilities of the application and run your tests."
+      }
+    ]
+  },
+  "top": {
+    "steps": [
+      {
+        "intro": "This interface allows you to see the tests performed with more details for each section of the OWASP TOP 10."
+      },
+      {
+        "element": "#top_title",
+        "intro": "The title of the OWASP section."
+      },
+      {
+        "element": "#top_description",
+        "intro": "This tab allows you to have a quick description of the section."
+      },
+      {
+        "element": "#top_content",
+        "intro": "The description of the section as defined in the OWASP TOP 10 project."
+      },
+      {
+        "element": "#top_ressources",
+        "intro": "This tab allows you to access different resources."
+      },
+      {
+        "element": "#top_content",
+        "intro": "The list of the resources provided will allow you to exploit or gain insight into how to fix vulnerabilities"
+      },
+      {
+        "element": "#top_functional_test",
+        "intro": "This test verifies whether the vulnerability/ies of the section are still functional in the application<br>If the test is functional then the operational tests can be started. Otherwise it is necessary to fix the application to make it functional again to perform the rest of the tests"
+      },
+      {
+        "element": "#top_operational_test",
+        "intro": "This is the list of operational tests.<br> An operational test makes it possible to check if one of the vulnerabilities concerned by this section is still present in the application.<br/><br/>There are 2 possibilities : <ul><li><b style=\"color:green\">The test is green</b> : the vulnerability or part of the vulnerability is fixed.</li><li><b style=\"color:red\">The test is red</b> : the vulnerability or part of the vulnerability is still present.</li></ul>"
+      },
+      {
+        "element": "#top_test_infos",
+        "intro": "Now that the operational tests have been run, some information about the result is provided to you.<ul><li><b>Comment : </b>an indication about why the test failed</li><li><b>Payload : </b>which payload enabled the vulnerability to be exploited</li></ul>"
+      },
+      {
+        "element": "#top_graph",
+        "intro": "This graph shows you the percentage of <b style=\"color:green\">successful</b> or <b style=\"color:red\">failed</b> tests."
+      },
+      {
+        "element": "#run_button",
+        "intro": "Performs functional and operational tests for the current OWASP section."
+      },
+      {
+        "intro": "Now you know how to run the tests and interpret the results<br/><br/>Good luck!"
+      }
+    ]
+  }
+}

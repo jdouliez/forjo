@@ -1,0 +1,29 @@
+<div class="happy-header">
+</div>
+
+<div class="col-sm-3">
+</div>
+<div class="col-sm-6" *ngIf="infos">
+  <h2 i18n="@@infos.title">Summary of your personal data</h2>
+    <table class="table table-condensed">
+    <thead>
+        <tr>
+            <th i18n="@@infos.result.column.name">Name</th>
+            <th i18n="@@infos.result.column.surname">Surname</th>
+            <th i18n="@@infos.result.column.address">Address</th>
+            <th i18n="@@infos.result.column.accounts">Bank accounts</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let acc of infos.accounts">
+            <td [innerHTML]="unsanitize(infos.lastname)"></td>
+            <td [innerHTML]="unsanitize(infos.firstname)"></td>
+            <td [innerHTML]="unsanitize(infos.address)"></td>
+            <td>{{acc.type}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+<div *ngIf="!infos">
+    <p i18n="@@infos.cookie.infos">The cookie 'user' is not present on your browser. Please login to view your information.</p>
+</div>

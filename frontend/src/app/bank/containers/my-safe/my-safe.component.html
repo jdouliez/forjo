@@ -1,0 +1,24 @@
+<p class="alert alert-danger safe-error" *ngIf="error" i18n="@@safe.message.error">Dear client, Our security policy implies that the secret code can only be retrieved from our internal network. You are welcomed inside our offices to proceed this request. Regards, You advisor.</p>
+
+<div class="happy-header">
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-6">
+    <h1 i18n="@@safe.title">My safe</h1>
+    <span i18n="@@safe.description">A secret passcode is required to unlock funds from your hidden account and make a transfer.</span><br />
+    <br />
+    <span i18n="@@safe.nocode">You currently have no passcode set.</span><br />
+    <br />
+    <button type="button" class="btn btn-info" (click)="getSecretCode()" i18n="@@safe.button.getcode.label">Get my code</button>
+
+    <br/>
+    <br/>
+
+    <p class="alert alert-success " *ngIf="success" i18n="@@safe.message.success"></p>
+  </div>
+
+
+</div>

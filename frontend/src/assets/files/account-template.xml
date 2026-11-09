@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<account>
+    <idAccount>13654</idAccount>
+    <type>Compte courant</type>
+    <balance>400</balance>
+    <rate>5</rate>
+    <document>13654.pdf</document>
+</account>

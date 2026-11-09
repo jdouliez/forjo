@@ -1,0 +1,26 @@
+<div class="happy-header">
+</div>
+
+<div class="col-sm-3">
+</div>
+<div class="col-sm-6">
+  <h2 i18n="@@rib.title">Upload your RIB</h2>
+
+  <!--A5 contrôle d'accèss-->
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th i18n="@@rib.result.column.account">Account</th>
+        <th i18n="@@rib.result.column.number">Identifier</th>
+        <th i18n="@@rib.result.column.rib">RIB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td i18n="@@rib.result.firstline.account">Current account</td>
+        <td i18n="@@rib.result.firstline.number">FR76 - 588545 65644 959</td>
+        <td class="action"><button class="btn" (click)="download(compteCourant)"><img src="./assets/img/download.png" class="logo" alt="Download" alt-i18n="@@rib.result.button.download" /></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,149 @@
+@import "../../../../variables";
+
+:host { display: block; }
+
+.navbar {
+  background: $bg-bandeau;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 0;
+  box-shadow: 0 6px 18px -12px rgba(11, 27, 51, .8);
+}
+.navbar .container { padding-top: 0; }
+
+/* Single flex bar */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 0;
+  min-height: 62px;
+  flex-wrap: wrap;
+}
+
+/* Brand (lion + name) */
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 6px 0;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-brand:hover, .nav-brand:focus { text-decoration: none; color: #fff; }
+#logo { width: 38px; height: auto; display: block; }
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Nav links */
+ul.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  float: none;
+  flex-wrap: wrap;
+}
+ul.navbar-nav > li { list-style: none; float: none; margin: 0; }
+.main-links { flex: 1 1 auto; }
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #DCE3F1;
+  font-size: .95rem;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: color var(--t), background-color var(--t);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+  text-decoration: none;
+}
+.nav-link.router-link-active {
+  color: #fff;
+  background: rgba(255, 255, 255, .10);
+}
+.nav-link.router-link-active::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-500, #D4A72C), var(--gold-600, #CA8A04));
+}
+
+/* Right-aligned actions: language + profile + logout */
+.nav-actions {
+  margin-left: auto;
+  gap: 6px;
+}
+
+/* Language switcher — segmented pill on the dark bar */
+.lang-item { list-style: none; }
+.lang-item > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background-color var(--t);
+}
+.lang-item > a:hover, .lang-item > a:focus { background: rgba(255, 255, 255, .14); }
+.lang-sep { list-style: none; color: rgba(255, 255, 255, .3); padding: 0 2px; }
+
+/* Log out — distinct secondary action, never "active" */
+.nav-logout {
+  margin-left: 4px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  color: #EAF0FB;
+}
+.nav-logout:hover,
+.nav-logout:focus {
+  background: rgba(212, 167, 44, .16);
+  border-color: rgba(212, 167, 44, .55);
+  color: #fff;
+}
+.nav-logout.router-link-active { background: transparent; }
+.nav-logout.router-link-active::after { display: none; }
+
+/* Profile avatar */
+.profile {
+  padding: 4px 6px;
+
+  img {
+    width: 34px;
+    height: 34px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .35);
+    object-fit: cover;
+    transition: border-color var(--t);
+  }
+}
+.profile.router-link-active::after { display: none; }
+.profile:hover img { border-color: var(--gold-500, #D4A72C); }
+
+@media (max-width: 768px) {
+  .row { min-height: 0; padding: 8px 0; }
+  .nav-actions { margin-left: 0; }
+  .main-links { flex-basis: 100%; }
+  .nav-link { padding: 8px 10px; font-size: .9rem; }
+}

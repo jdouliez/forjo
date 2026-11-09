@@ -1,0 +1,9 @@
+FROM openkbs/jdk-mvn-py3:v1.3.1
+
+WORKDIR /app
+
+COPY src/main/resources/jwt_tool/requirements.txt /tmp
+RUN sudo apt update && sudo apt install -y colorized-logs
+RUN python3 -m pip install -r /tmp/requirements.txt
+
+ENTRYPOINT ./mvnw spring-boot:run

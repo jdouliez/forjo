@@ -1,0 +1,13 @@
+{
+	"default_language" : "en",
+	"languages" : ["fr","en"],
+	"translations" : [
+		{
+			"key" : "welcome",
+			"targets" : {
+				"fr" : "Bienvenue dans votre banque &eacute;tonnante",
+        "en" : "Welcome to your amazing bank"
+			}
+		}
+	]
+}

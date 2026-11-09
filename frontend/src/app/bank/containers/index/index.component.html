@@ -1,0 +1,136 @@
+<div class="index container-fluid">
+    <div class="row is-table-row">
+      <div class="col-sm-6 col-md-6">
+        <img src="../../../../assets/img/visuelcampagne300.png" alt="Happy people" style="width:100%">
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="content">
+            <h1 i18n="@@welcome">Welcome to your amazing bank</h1>
+            <img src="../../../../assets/img/pictoparticulier.svg" alt="picto" style="margin-top: -70px;">
+            <div class="row" id="message">
+                <div *ngIf="!token" class="">
+                    <h2 i18n="@@connexionInvit">Please login before accessing your amazing bank</h2>
+                </div>
+                <div *ngIf="token" class="">
+                    <h2 i18n="@@welcome">Welcome to your amazing bank</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- REMOVE THIS ON PRODUCTION -->
+        <!-- USER : admin@email.com -->
+        <!-- PASSWOD : Forjo2022-->
+
+        <div *ngIf="!token" class="login-card">
+          <div class="row" *ngIf="!token && register">
+            <div class="col-sm">
+              <form class="text-center border border-light p-5">
+                <h3 class="h4 mb-4" i18n="@@index.connexion.title">Login</h3>
+                <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" id="FormEmailConnect" class="form-control mb-4"
+                  placeholder="E-mail" i18n-placeholder="@@EmailPlaceholder"required>
+                <br />
+                <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="FormPasswordConnect"
+                  class="form-control mb-4" placeholder="Password" i18n-placeholder="@@PasswordPlaceholder" required>
+                <div style="visibility:hidden">
+                  <span i18n="@@index.connexion.admin">Is admin ?</span>
+                  <input type="checkbox" #check class="form-check-input admin-check" id="adminConnect">
+                </div>
+                <button mdbBtn class="btn btn-primary btn-lg active" type="submit" (click)="connection(check.checked)" i18n="@@index.connexion.button.connect">Login</button>
+                <h3 style="color:red"><span *ngIf="error" i18n="@@index.connexion.error">Incorrect credentials</span></h3>
+                <h3 style="color:green"><span *ngIf="successPasswordReset" i18n="@@index.passwordReset.success">Password has been reset</span></h3>
+                <div><a class="h4 mb-4" (click)="eventregister()" i18n="@@index.link.register">Register now</a></div>
+                <div><a class="h4 mb-4" (click)="eventresetPassword()" i18n="@@index.link.passwordForget">Forgot your password?</a></div>
+
+              </form>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="!token && login">
+            <div class="col-sm">
+              <form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && registerForm()" #f="ngForm" novalidate>
+                  <p class="h4 mb-4" i18n="@@index.register.title">Create an account</p>
+                  <h3 style="color:red" ><span *ngIf="error" i18n="@@index.register.error">{{ errorMessage }}</span></h3>
+                  <div class="form-group">
+                      <input type="text" name="email" class="form-control mb-4" placeholder="E-mail" i18n-placeholder="@@EmailPlaceholder" required email [pattern]="emailPattern" [(ngModel)]="model.email" #emailInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailInput.invalid }">
+                      <div *ngIf="f.submitted && emailInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="emailInput.errors.required" i18n="@@index.register.error.email.required">The E-mail field is required</div>
+                          <div style="text-align: left; color: red" *ngIf="emailInput.errors.pattern" i18n="@@index.register.error.email.format">Incorrect E-mail format</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control mb-4" name="password" placeholder="Password" type="password" i18n-placeholder="@@PasswordPlaceholder" required [(ngModel)]="model.password" #passwordInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && passwordInput.invalid }">
+                      <div *ngIf="f.submitted && passwordInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="passwordInput.errors.required" i18n="@@index.register.error.password.required">The Password field is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control mb-4" name="nom" placeholder="Name" i18n-placeholder="@@NamePlaceholder" required [(ngModel)]="model.nom" #nomInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nomInput.invalid }">
+                      <div *ngIf="f.submitted && nomInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="nomInput.errors.required" i18n="@@index.register.error.name.required">The Name field is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control mb-4" name="prenom" placeholder="Surname" i18n-placeholder="@@SurnamePlaceholder" required [(ngModel)]="model.prenom" #prenomInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && prenomInput.invalid }">
+                      <div *ngIf="f.submitted && prenomInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="prenomInput.errors.required" i18n="@@index.register.error.surname.required">The Surname field is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control mb-4" name="adresse" placeholder="Address" i18n-placeholder="@@AdressPlaceholder" required [(ngModel)]="model.adresse" #adresseInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && adresseInput.invalid }">
+                      <div *ngIf="f.submitted && adresseInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="adresseInput.errors.required" i18n="@@index.register.error.address.required">The Address field is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <span style="text-align: left;" i18n="@@secretQuestion">What is your mother's maiden name?</span>
+                    <input class="form-control mb-4" name="secretAnswer" placeholder="Secret answer" i18n-placeholder="@@secretAnswerPlaceholder" required [(ngModel)]="model.secretAnswer" #secretAnswerInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && secretAnswerInput.invalid }">
+                    <div *ngIf="f.submitted && secretAnswerInput.invalid" class="invalid-feedback">
+                        <div style="text-align: left; color: red" *ngIf="secretAnswerInput.errors.required" i18n="@@index.register.error.secretAnswer.required">The secretAnswer field is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <button  mdbBtn class="btn btn-primary btn-lg active" type="submit" i18n="@@index.register.button.register">Sign up for registration</button>
+                  </div>
+                  <div><a class="h4 mb-4" (click)="eventconnect()" i18n="@@index.link.connexion">Return to login</a></div>
+                  <div><a class="h4 mb-4" (click)="eventresetPassword()" i18n="@@index.link.passwordForget">Forgot your password?</a></div>
+              </form>
+            </div>
+          </div>
+          <div class="row" *ngIf="!token && passwordReset">
+            <div class="col-sm">
+              <form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && resetPasswordForm()" #f="ngForm" novalidate>
+                  <p class="h4 mb-4" i18n="@@index.link.passwordForget">Reset your password</p>
+                  <h3 style="color:red" ><span *ngIf="error" i18n="@@index.passwordReset.error">Password reset failed</span></h3>
+                  <div class="form-group">
+                      <input type="text" name="email" class="form-control mb-4" placeholder="E-mail" i18n-placeholder="@@EmailPlaceholder" required email [pattern]="emailPattern" [(ngModel)]="model.email" #emailInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailInput.invalid }">
+                      <div *ngIf="f.submitted && emailInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="emailInput.errors.required" i18n="@@index.register.error.email.required">The E-mail field is required</div>
+                          <div style="text-align: left; color: red" *ngIf="emailInput.errors.pattern" i18n="@@index.register.error.email.format">Incorrect E-mail format</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control mb-4" name="password" placeholder="Password" type="password" i18n-placeholder="@@NewPasswordPlaceholder" required [(ngModel)]="model.password" #passwordInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && passwordInput.invalid }">
+                      <div *ngIf="f.submitted && passwordInput.invalid" class="invalid-feedback">
+                          <div style="text-align: left; color: red" *ngIf="passwordInput.errors.required" i18n="@@index.register.error.password.required">The Password field is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <span style="text-align: left;" i18n="@@secretQuestion">What is your mother's maiden name?</span>
+                    <input class="form-control mb-4" name="secretAnswer" placeholder="Secret answer" i18n-placeholder="@@secretAnswerPlaceholder" required [(ngModel)]="model.secretAnswer" #secretAnswerInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && secretAnswerInput.invalid }">
+                    <div *ngIf="f.submitted && secretAnswerInput.invalid" class="invalid-feedback">
+                        <div style="text-align: left; color: red" *ngIf="secretAnswerInput.errors.required" i18n="@@index.register.error.secretAnswer.required">The secretAnswer field is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <button  mdbBtn class="btn btn-primary btn-lg active" type="submit" i18n="@@index.link.passwordForget">Reset your password</button>
+                  </div>
+                  <div><a class="h4 mb-4" (click)="eventconnect()" i18n="@@index.link.connexion">Return to login</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>

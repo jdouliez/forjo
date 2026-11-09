@@ -1,0 +1,196 @@
+{
+  "A01": {
+    "title": "A01 - Broken Access Control",
+    "description": "<p>Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits. Common accesscontrol vulnerabilities include:</p><br/><ul><li><p>Violation of the principle of least privilege or deny by default,where access should only be granted for particular capabilities,roles, or users, but is available to anyone.</p></li><li><p>Bypassing access control checks by modifying the URL (parametertampering or force browsing), internal application state, or theHTML page, or by using an attack tool modifying API requests.</p></li><li><p>Permitting viewing or editing someone else's account, by providingits unique identifier (insecure direct object references)</p></li><li><p>Accessing API with missing access controls for POST, PUT and DELETE.</p></li><li><p>Elevation of privilege. Acting as a user without being logged in oracting as an admin when logged in as a user.</p></li><li><p>Metadata manipulation, such as replaying or tampering with a JSONWeb Token (JWT) access control token, or a cookie or hidden fieldmanipulated to elevate privileges or abusing JWT invalidation.</p></li><li><p>CORS misconfiguration allows API access from unauthorized/untrustedorigins.</p></li><li><p>Force browsing to authenticated pages as an unauthenticated user orto privileged pages as a standard user.</p></li></ul>",
+    "help": "",
+    "disable": "A01 is not functional",
+    "functional": "A01 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+      },
+      {
+        "title": "Broken Access Control",
+        "filename": "Broken Access Control - OWASP.pdf"
+      }
+    ]
+  },
+  "A02": {
+    "title": "A02 - Cryptographic Failures",
+    "description": "<p>The first thing is to determine the protection needs of data in transitand at rest. For example, passwords, credit card numbers, health records, personal information, and business secrets require extra protection, mainly if that data falls under privacy laws, e.g., EU's General Data Protection Regulation (GDPR), or regulations, e.g.,financial data protection such as PCI Data Security Standard (PCI DSS).For all such data:</p><br/><ul><li><p>Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, FTP also using TLS upgrades like STARTTLS. External internet traffic is hazardous. Verify all internal traffic, e.g.,between load balancers, web servers, or back-end systems.</p></li><li><p>Are any old or weak cryptographic algorithms or protocols used either by default or in older code?</p></li><li><p>Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing? Are crypto keys checked into source code repositories?</p></li><li><p>Is encryption not enforced, e.g., are any HTTP headers (browser) security directives or headers missing?</p></li><li><p>Is the received server certificate and the trust chain properly validated? </p></li><li><p>Are initialization vectors ignored, reused, or not generated sufficiently secure for the cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is encryption used when authenticated encryption is more appropriate?</p></li><li><p>Are passwords being used as cryptographic keys in absence of apassword base key derivation function?</p></li><li><p>Is randomness used for cryptographic purposes that was not designed to meet cryptographic requirements? Even if the correct function is chosen, does it need to be seeded by the developer, and if not, has the developer over-written the strong seeding functionality built intoit with a seed that lacks sufficient entropy/unpredictability?</p></li><li><p>Are deprecated hash functions such as MD5 or SHA1 in use, or a renon-cryptographic hash functions used when cryptographic hash functionsare needed?</p></li><li><p>Are deprecated cryptographic padding methods such as PKCS number 1 v1.5 in use?</p></li><li><p>Are cryptographic error messages or side channel information exploitable, for example in the form of padding oracle attacks?</p></li></ul>",
+    "help": "",
+    "disable": "A02 is not functional",
+    "functional": "A02 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+      },
+      {
+        "title": "OWASP A2 - Sensitive Data Exposure",
+        "filename": "Sensitive Data Exposure.pdf"
+      }
+    ]
+  },
+  "A03": {
+    "title": "A03 - Injection",
+    "description": "<p>An application is vulnerable to attack when:</p><br/><ul><li>User-supplied data is not validated, filtered, or sanitized by the application.</li><li>Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.</li><li>Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.</li><li>Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures.</li></ul><br/>Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections. Automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs is strongly encouraged. Organizations can include static (SAST), dynamic (DAST), and interactive (IAST) application security testing tools into the CI/CD pipeline to identify introduced injection flaws before production deployment.",
+    "help": "Do you know rockyou.txt ? I hope the password you use are NOT in it... Maybe you should check.",
+    "disable": "A03 is not functional",
+    "functional": "A03 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A03_2021-Injection/"
+      },
+      {
+        "title": "Introduction & Exploitation",
+        "filename": "SQL Injection - OWASP.pdf"
+      },
+      {
+        "title": "Patch SQL Injection",
+        "filename": "Reviewing Code for SQL Injection - OWASP.pdf"
+      },
+      {
+        "title": "Command injection in Java",
+        "filename": "Command injection in Java - OWASP.pdf"
+      },
+      {
+        "title": "Cross Site Scripting Prevention · OWASP Cheat Sheet Series",
+        "filename": "Cross Site Scripting Prevention · OWASP Cheat Sheet Series.pdf"
+      },
+      {
+        "title": "OWASP A3 - Cross-Site Scripting",
+        "filename": "Cross-Site Scripting.pdf"
+      }
+    ]
+  },
+  "A04": {
+    "title": "A04 - Insecure Design",
+    "description": "Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.",
+    "help": "",
+    "disable": "A04 is not functional",
+    "functional": "A04 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A04_2021-Insecure_Design/"
+      }
+    ]
+  },
+  "A05": {
+    "title": "A05 - Security Misconfiguration",
+    "description": "<p>The application might be vulnerable if the application is:</p><br/><ul><li><p>Missing appropriate security hardening across any part of theapplication stack or improperly configured permissions on cloudservices.</p></li><li><p>Unnecessary features are enabled or installed (e.g., unnecessaryports, services, pages, accounts, or privileges).</p></li><li><p>Default accounts and their passwords are still enabled andunchanged.</p></li><li><p>Error handling reveals stack traces or other overly informativeerror messages to users.</p></li><li><p>For upgraded systems, the latest security features are disabled ornot configured securely.</p></li><li><p>The security settings in the application servers, applicationframeworks (e.g., Struts, Spring, ASP.NET), libraries, databases,etc., are not set to secure values.</p></li><li><p>The server does not send security headers or directives, or they arenot set to secure values.</p></li><li><p>The software is out of date or vulnerable.</p></li></ul>",
+    "help": "During a pentest, the auditors found a secret page that develepors were using. Can you please do something about that ?",
+    "disable": "A05 is not functional",
+    "functional": "A05 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"
+      },
+      {
+        "title": "OWASP A5 - Security Misconfiguration",
+        "filename": "OWASP A5 - Security Misconfiguration.pdf"
+      },
+      {
+        "title": "XML External Entity (XXE) Processing",
+        "filename": "XML External Entity (XXE) Processing - OWASP.pdf"
+      },
+      {
+        "title": "XML External Entity Prevention · OWASP Cheat Sheet Series",
+        "filename": "XML External Entity Prevention · OWASP Cheat Sheet Series.pdf"
+      }
+    ]
+  },
+  "A06": {
+    "title": "A06 - Vulnerable and Outdated Components",
+    "description": "<p>You are likely vulnerable:</p><br/><ul><li><p>If you do not know the versions of all components you use (bothclient-side and server-side). This includes components you directlyuse as well as nested dependencies.</p></li><li><p>If the software is vulnerable, unsupported, or out of date. Thisincludes the OS, web/application server, database management system(DBMS), applications, APIs and all components, runtime environments,and libraries.</p></li><li><p>If you do not scan for vulnerabilities regularly and subscribe tosecurity bulletins related to the components you use.</p></li><li><p>If you do not fix or upgrade the underlying platform, frameworks,and dependencies in a risk-based, timely fashion. This commonlyhappens in environments when patching is a monthly or quarterly taskunder change control, leaving organizations open to days or monthsof unnecessary exposure to fixed vulnerabilities.</p></li><li><p>If software developers do not test the compatibility of updated,upgraded, or patched libraries.</p></li><li><p>If you do not secure the components’ configurations.</p></li></ul>",
+    "help": "",
+    "disable": "A06 is not functional",
+    "functional": "A06 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"
+      },
+      {
+        "title": "OWASP A6 - Using components with vulnerabilities",
+        "filename": "OWASP A6 - Using components with vulnerabilities.pdf"
+      }
+    ]
+  },
+  "A07": {
+    "title": "A07 - Identification and Authentication Failures",
+    "description": "<p>Confirmation of the user's identity, authentication, and sessionmanagement is critical to protect against authentication-relatedattacks. There may be authentication weaknesses if the application:</p><br/><ul><li><p>Permits automated attacks such as credential stuffing, where theattacker has a list of valid usernames and passwords.</p></li><li><p>Permits brute force or other automated attacks.</p></li><li><p>Permits default, weak, or well-known passwords, such as 'Password1' or 'admin/admin'.</p></li><li><p>Uses weak or ineffective credential recovery and forgot-passwordprocesses, such as 'knowledge-based answers,' which cannot be madesafe.</p></li><li><p>Uses plain text, encrypted, or weakly hashed passwords data stores.</p></li><li><p>Has missing or ineffective multi-factor authentication.</p></li><li><p>Exposes session identifier in the URL.</p></li><li><p>Reuse session identifier after successful login.</p></li><li><p>Does not correctly invalidate Session IDs. User sessions orauthentication tokens (mainly single sign-on (SSO) tokens) aren'tproperly invalidated during logout or a period of inactivity.</p></li></ul>",
+    "help": "During a pentest, the auditors found a secret page that develepors were using. Can you please do something about that?",
+    "disable": "A07 is not functional",
+    "functional": "A07 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"
+      },
+      {
+        "title": "Blocking Brute Force Attacks - OWASP",
+        "filename": "Blocking Brute Force Attacks - OWASP.pdf"
+      },
+      {
+        "title": "Testing for Weak lock out mechanism",
+        "filename": "Testing for Weak lock out mechanism - OWASP.pdf"
+      }
+    ]
+  },
+  "A08": {
+    "title": "A08 - Software and Data Integrity Failures",
+    "description": "<p>Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization.</p>",
+    "help": "You should take a look at the cookie of your browser. Something is just not right.",
+    "disable": "A08 is not functional",
+    "functional": "A08 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/"
+      },
+      {
+        "title": "OWASP A8 - Insecure deserialization",
+        "filename": "OWASP A8 - Insecure deserialization.pdf"
+      },
+      {
+        "title": "Deserialization · OWASP Cheat Sheet Series",
+        "filename": "Deserialization · OWASP Cheat Sheet Series.pdf"
+      }
+    ]
+  },
+  "A09": {
+    "title": "A09 - Security Logging and Monitoring Failures",
+    "description": "<p>Returning to the OWASP Top 10 2021, this category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. In<ul><li><p>Auditable events, such as logins, failed logins, and high-valuetransactions, are not logged.</p></li><li><p>Warnings and errors generate no, inadequate, or unclear logmessages.</p></li><li><p>Logs of applications and APIs are not monitored for suspiciousactivity.</p></li><li><p>Logs are only stored locally.</p></li><li><p>Appropriate alerting thresholds and response escalation processes are not in place or effective.</p></li><li><p>Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) donot trigger alerts.</p></li><li><p>The application cannot detect, escalate, or alert for active attacksin real-time or near real-time.</p></li></ul>sufficient logging, detection, monitoring, and active response occurs any time:</p><br/><p>You are vulnerable to information leakage by making logging and alerting events visible to a user or an attacker.</p>",
+    "help": "",
+    "disable": "A09 is not functional",
+    "functional": "A09 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/"
+      },
+      {
+        "title": "OWASP A9 - Logging & Monitoring",
+        "filename": "OWASP A9 - Logging & Monitoring.pdf"
+      }
+    ]
+  },
+  "A10": {
+    "title": "A10 - Server-Side Request Forgery (SSRF)",
+    "description": "<p>SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list (ACL).</p> <br/> <p>As modern web applications provide end-users with convenient features, fetching a URL becomes a common scenario. As a result, the incidence of SSRF is increasing. Also, the severity of SSRF is becoming higher due to cloud services and the complexity of architectures.</p>",
+    "help": "",
+    "disable": "A10 is not functional",
+    "functional": "A10 is functional",
+    "resources": [
+      {
+        "title": "OWASP reference",
+        "link": "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"
+      }
+    ]
+  }
+}

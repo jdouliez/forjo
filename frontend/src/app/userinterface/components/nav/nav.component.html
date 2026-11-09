@@ -1,0 +1,48 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="row">
+            <a class="nav-brand" routerLink="/" title="Lion's Banking corporation">
+                <img src="../assets/img/lion.png" alt="logo" id="logo">
+                <span class="brand-name" i18n="@@nav-link.index">Lion's Banking corporation</span>
+            </a>
+
+            <ul class="nav navbar-nav main-links">
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link" routerLink="/account" routerLinkActive="router-link-active" i18n="@@nav-link.account">My account</a>
+              </li>
+
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link" [routerLink]="['/advisor', idAdvisor]" routerLinkActive="router-link-active" i18n="@@nav-link.advisor">My advisor</a>
+              </li>
+
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link" routerLink="/infos" routerLinkActive="router-link-active" i18n="@@nav-link.infos">My personal data</a>
+              </li>
+
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link" routerLink="/rib" routerLinkActive="router-link-active" i18n="@@nav-link.rib">RIB</a>
+              </li>
+
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link" routerLink="/safe" routerLinkActive="router-link-active" i18n="@@nav-link.safe">My safe</a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav nav-actions">
+              <li class="lang-item"><a (click)="changeLanguage('fr')" alt="FR" title="Français">🇫🇷</a></li>
+              <li class="lang-sep" aria-hidden="true">/</li>
+              <li class="lang-item"><a (click)="changeLanguage('en')" alt="EN" title="English">🇬🇧</a></li>
+
+              <li class="nav-item" *ngIf="token">
+                <a class="nav-link profile" routerLink="/profile" routerLinkActive="router-link-active">
+                  <img src="../assets/img/profilepicture.jpg" alt="profile_picture" id="profile_picture" />
+                </a>
+              </li>
+
+              <li class="nav-item" *ngIf="token">
+                 <a class="nav-link nav-logout" routerLink="/" routerLinkActive="router-link-active" (click)="logout()" i18n="@@nav-link.logout">Log out</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,72 @@
+@import "../../../../variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg, #EEF2F9);
+}
+
+/* Single merged dark top bar (sticky) */
+app-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: block;
+  background: $bg-bandeau;
+}
+
+/* Header kept only for the /remediation route */
+.remediation-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: $header-remediation;
+  border-bottom: 1px solid var(--border, #E2E8F0);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .06);
+  padding: 0;
+}
+.remediation-header.is-hidden { display: none; }
+
+/* Main working area */
+main {
+  flex: 1 0 auto;
+  background: var(--bg, #EEF2F9);
+  padding: 32px 20px 56px;
+}
+
+/* Legacy empty decorative nodes — removed cleanly */
+main > .position-fixed,
+main > aside { display: none; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* One consistent, centered content column */
+.contents {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Footer sits at the end of the flow */
+footer.footer {
+  position: static;
+  flex-shrink: 0;
+  height: auto;
+  margin-top: 0;
+  background: var(--brand-900, #0B1B33);
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  main { padding: 20px 14px 40px; }
+}

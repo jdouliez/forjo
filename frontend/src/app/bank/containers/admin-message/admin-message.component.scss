@@ -1,0 +1,33 @@
+th:nth-child(1),
+th:nth-child(2) {
+  min-width: 50px;
+  text-align: center;
+}
+
+table p {
+  max-width: 150px;
+}
+
+tr td:last-child,
+tr td:nth-child(1),
+tr td:nth-child(2),
+th:last-child {
+  text-align: center;
+}
+
+
+.action-reply {
+
+}
+
+.action-delete {
+  margin-left: 5px;
+}
+
+
+th, td {
+  overflow: hidden;
+  width:auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

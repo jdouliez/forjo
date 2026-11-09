@@ -1,0 +1,102 @@
+#/bin/bash
+
+ng xi18n --output-path locale
+cd src/locale
+cp messages.en.xlf messages.en.old
+cp messages.fr.xlf messages.fr.old
+
+cp messages.xlf messages.orig
+sed '/id="ngb./,+6 d' messages.orig | sed '/node_modules/,+3 d' > messages.xlf
+
+sed '/<source>/{p;s/source/target/g;}' messages.xlf > messages.en.xlf
+cp messages.en.xlf messages.fr.xlf
+
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+# | sed 's|<target>|<target>|' \
+sed 's|<target>Lion\&apos;s Banking corporation|<target>Soci\&eacute;t\&eacute; bancaire des Lions|' \
+ messages.fr.xlf \
+| sed 's|<target>My account|<target>Mes comptes|' \
+| sed 's|<target>My advisor|<target>Mon conseiller|' \
+| sed 's|<target>My personal data|<target>Mes donn\&eacute;es personnelles|' \
+| sed 's|<target>Log out|<target>Se d\&eacute;connecter|' \
+| sed 's|<target>Error 404|<target>Erreur 404|' \
+| sed 's|<target>The page you are looking for has been deleted, changed its name or is temporarily unavailable|<target>La page que vous recherchez a \&eacute;t\&eacute; supprim\&eacute;e, a chang\&eacute; de nom ou est temporairement indisponible.|' \
+| sed 's|<target>Return to home page|<target>Retournez \&agrave; la page d\&apos;accueil|' \
+| sed 's|<target>Click Here|<target>Cliquez ici|' \
+| sed 's|<target>Good luck|<target>Bonne chance|' \
+| sed 's|<target>Status of your bank accounts|<target>Statut de vos comptes bancaires|' \
+| sed 's|<target>Heading|<target>Intitul\&eacute;|' \
+| sed 's|<target>Status|<target>Statut|' \
+| sed 's|<target>Files|<target>Fichiers|' \
+| sed 's|<target>Edit|<target>Consulter|' \
+| sed 's|<target>Add an account|<target>Ajouter un compte|' \
+| sed 's|<target>An advisor at your disposal to listen to you|<target>Un conseiller \&agrave; votre \&eacute;coute|' \
+| sed 's|<target>Surname|<target>Pr\&eacute;nom|' \
+| sed 's|<target>Name|<target>Nom|' \
+| sed 's|<target>Office|<target>Bureau|' \
+| sed 's|<target>Have you got any questions|<target>Avez-vous des questions|' \
+| sed 's|<target>Send|<target>Envoyer|' \
+| sed 's|<target>Your question|<target>Votre question|' \
+| sed 's|<target>Summary of your personal data|<target>R\&eacute;sum\&eacute; de vos donn\&eacute;es personnelles|' \
+| sed 's|<target>Surname|<target>Pr\&eacute;nom|' \
+| sed 's|<target>Name|<target>Nom|' \
+| sed 's|<target>Address|<target>Adresse|' \
+| sed 's|<target>Bank accounts|<target>Comptes bancaires|' \
+| sed 's|<target>The cookie \&apos;user\&apos; is not present on your browser. Please login to view your information.|<target>Le cookie \&apos;user\&apos; n\&apos;est pas pr\&eacute;sent dans votre navigateur. Veuillez vous connecter pour consulter vos informations.|' \
+| sed 's|<target>Upload your RIB|<target>T\&eacute;l\&eacute;chargez votre RIB|' \
+| sed 's|<target>Account|<target>Compte|' \
+| sed 's|<target>Identifier|<target>Identifiant|' \
+| sed 's|<target>Current account|<target>Compte courant|' \
+| sed 's|<target>Download|<target>T\&eacute;l\&eacute;chargez|' \
+| sed 's|<target>Please login before accessing your amazing bank|<target>Veuillez vous connecter avant d\&apos;acc\&eacute;der \&agrave; votre banque \&eacute;tonnante|' \
+| sed 's|<target>Welcome to your amazing bank|<target>Bienvenue dans votre banque \&eacute;tonnante|' \
+| sed 's|<target>Previous|<target>Pr\&eacute;c\&eacute;dent|' \
+| sed 's|<target>Next|<target>Suivant|' \
+| sed 's|<target>Login|<target>Se connecter|' \
+| sed 's|<target>Register now|<target>Inscrivez-vous maintenant|' \
+| sed 's|<target>Login|<target>S\&apos;identifier|' \
+| sed 's|<target>E-mail|<target>Courriel|' \
+| sed 's|<target>Password|<target>Mot de passe|' \
+| sed 's|<target>Connection for administrators|<target>Connexion pour administrateurs|' \
+| sed 's|<target>Login|Identifiant<target>|' \
+| sed 's|<target>Create an account|<target>Cr\&eacute;ez un compte|' \
+| sed 's|<target>The E-mail field is required|<target>Le champ Courriel est obligatoire|' \
+| sed 's|<target>Incorrect E-mail format|<target>Format de courriel incorrect|' \
+| sed 's|<target>The Password field is required|<target>Le champ Mot de passe est obligatoire|' \
+| sed 's|<target>Name|<target>Nom|' \
+| sed 's|<target>The Name field is required|<target>Le champ Nom est obligatoire|' \
+| sed 's|<target>Surname|<target>Pr\&eacute;nom|' \
+| sed 's|<target>The Surname field is required|<target>Le champ Pr\&eacute;nom est obligatoire|' \
+| sed 's|<target>Address|<target>Adresse|' \
+| sed 's|<target>The Address field is required|<target>Le champ Adresse est obligatoire|' \
+| sed 's|<target>Sign up|<target>S\&apos;enregistrer|' \
+| sed 's|<target>Choose your language|<target>Choisissez votre langue|' \
+| sed 's|<target>French|<target>Fran\&ccedil;ais|' \
+| sed 's|<target>English|<target>Anglais|' \
+| sed 's|<target>Your account summary|<target>Le r\&eacute;capitulatif de votre compte|' \
+| sed 's|<target>Files|<target>Fichiers|' \
+| sed 's|<target>Which accounts do you want to add|<target>Quels comptes voulez-vous ajouter|' \
+| sed 's|<target>Download the account file|T\&eacute;l\&eacute;chargez le fichier de compte<target>|' \
+| sed 's|<target>Add|<target>Ajouter|' \
+| sed 's|<target>Here are the details of the account created|<target>VoiciVoici les d\&eacute;tails du compte cr\&eacute;\&eacute;|' \
+| sed 's|<target>Rate|<target>Taux|' \
+| sed 's|<target>Webshell to delete|<target>Webshell \&agrave; supprimer|' \
+| sed 's|<target>Execute|<target>Ex\&eacute;cutez|' \
+| sed 's|<target>Results of the command|<target>R\&eacute;sultats de la commande|' \
+| sed 's|<target>Hello admin, here are the messages for the advisors|<target>Bonjour admin, voici les messages pour les conseillers|' \
+| sed 's|<target>From|<target>De|' \
+| sed 's|<target>To|<target>Pour|' \
+| sed 's|<target>Subject|<target>Sujet|' \
+| sed 's|<target>Content|<target>Contenu|' \
+| sed 's|<target>Status|<target>Statut|' \
+| sed 's|<target>Honeypot logs|<target>Logs Pot de miel|' \
+> messages.fr.temp.xlf
+
+cp messages.fr.temp.xlf messages.fr.xlf
